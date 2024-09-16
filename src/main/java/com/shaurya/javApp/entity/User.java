@@ -21,7 +21,7 @@ public class User implements UserDetails {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String name;
 
     @Column(length = 1)
@@ -32,7 +32,7 @@ public class User implements UserDetails {
     @Column(length = 100)
     private String password;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "profileimage", columnDefinition = "TEXT")
     private String profileImage;
 
     private String role;

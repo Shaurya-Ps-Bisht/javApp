@@ -11,11 +11,11 @@ public class VoteComment {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "commentId", referencedColumnName = "commentId")
+    @JoinColumn(name = "commentid", referencedColumnName = "commentid")
     private Comment comment;
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id")
+    @JoinColumn(name = "userid", referencedColumnName = "id")
     private User user;
 }

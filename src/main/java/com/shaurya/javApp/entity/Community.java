@@ -13,20 +13,22 @@ import java.util.List;
 public class Community {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "comid")
     private Long comId;
 
-    @Column(length = 100)
+    @Column(name = "comname", length = 100)
     private String comName;
 
     @ManyToOne
-    @JoinColumn(name = "createdByWhom", referencedColumnName = "id")
+    @JoinColumn(name = "createdbywhom", referencedColumnName = "id", nullable = false)
     private User createdByWhom;
 
+    @Column(name = "timecreated")
     private LocalDateTime timeCreated;
 
     @Column(columnDefinition = "TEXT")
     private String category;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "communityprofileimage", columnDefinition = "TEXT")
     private String communityProfileImage;
 }

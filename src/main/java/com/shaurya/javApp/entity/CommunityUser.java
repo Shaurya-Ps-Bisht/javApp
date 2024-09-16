@@ -11,12 +11,12 @@ public class CommunityUser {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id")
+    @JoinColumn(name = "userid", referencedColumnName = "id")
     private User user;
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "comId", referencedColumnName = "comId")
+    @JoinColumn(name = "comid", referencedColumnName = "comid")
     private Community community;
 }
 
